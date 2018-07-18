@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <TheHeader @sidenavToggle="displaySideNav = !displaySideNav" />
+    <TheBanner />
     <TheSideNav 
       :show="displaySideNav"
       @close="displaySideNav = false"/>
@@ -11,12 +12,14 @@
 
 <script>
 import TheHeader from '@/components/Navigation/TheHeader'
+import TheBanner from '@/components/Banner/TheBanner'
 import TheSideNav from '@/components/Navigation/TheSideNav'
 import TheFooter from '@/components/Footer/TheFooter'
 
 export default {
   components: {
     TheHeader,
+    TheBanner,
     TheSideNav,
     TheFooter
   },

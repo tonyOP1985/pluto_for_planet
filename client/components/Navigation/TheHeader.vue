@@ -27,14 +27,13 @@
 </template>
 
 <script>
-import TheSideNavToggle from "@/components/Navigation/TheSideNavToggle";
+import TheSideNavToggle from "@/components/Navigation/TheSideNavToggle"
 import TheSocialDropdown from "@/components/Social/TheSocialDropdown"
 
 export default {
   name: "TheHeader",
   components: {
     TheSideNavToggle,
-    Logo,
     TheSocialDropdown
   },
   data() {
@@ -45,12 +44,12 @@ export default {
   },
   computed: {
     addHeaderClass() {
-      if (this.$route.path === '/') return !this.navPositionRelative
+      if (this.$route.path === '/' || this.$route.path === '/dates') return !this.navPositionRelative
 
       return this.navPositionRelative
     }
   }
-};
+}
 </script>
 
 
@@ -147,7 +146,7 @@ export default {
   transition: .5s;
 
   &:hover { 
-    color: lighten($purple-primary, 15%)
+    color: lighten($purple-primary, 15%);
   }
 }
 

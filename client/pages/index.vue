@@ -1,10 +1,10 @@
 <template>
   <div class="home-page">
-    <section class="intro">
+    <!-- <section class="intro">
       <div class="banner-wrapper">
         <h3 class="pluto-for-planet-banner">Pluto For Planet</h3>
       </div>
-    </section>
+    </section> -->
 
     <section class="featured-dates">
       <div class="featured-dates-header">
@@ -26,22 +26,14 @@
         </nuxt-link>
       </div>
       <article class="pluto-for-planet-photos">
-        <div class="photo-container">
-        </div>
-        <div class="photo-container">
-        </div>
-        <div class="photo-container">
-        </div>
-        <div class="photo-container">
-        </div>
-        <div class="photo-container">
-        </div>
-        <div class="photo-container">
-        </div>
-        <div class="photo-container">
-        </div>
-        <div class="photo-container">
-        </div>
+        <div class="photo-container"></div>
+        <div class="photo-container"></div>
+        <div class="photo-container"></div>
+        <div class="photo-container"></div>
+        <div class="photo-container"></div>
+        <div class="photo-container"></div>
+        <div class="photo-container"></div>
+        <div class="photo-container"></div>
       </article>
     </section> -->
   </div>
@@ -49,10 +41,12 @@
 
 <script>
 import Dates from '@/components/Dates/Date'
+import TheBanner from '@/components/Banner/TheBanner'
 
 export default {
   components: {
-    Dates
+    Dates,
+    TheBanner
   }
 }
 </script>
@@ -69,6 +63,7 @@ export default {
   padding: 30px;
   box-sizing: border-box;
   background-image: url('~assets/images/pluto_for_planet.jpg');
+  // background-image: url('~assets/images/pluto_for_planet_croped.jpg');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -76,7 +71,7 @@ export default {
 
 @font-face {
   font-family: 'Iron Maiden';
-  src: url("~assets/fonts/ipp.ttf")
+  src: url("~assets/fonts/ipp.ttf");
 }
 
 .banner-wrapper {
@@ -153,12 +148,6 @@ export default {
     background-position:center;
     background-repeat:no-repeat;
     margin: 0 1rem 1.5rem 1rem;
-    
-    // img {
-    //   max-width: 100%;
-    //   max-height: 100%;
-    //   display: block;
-    // }
   }
 }
 
